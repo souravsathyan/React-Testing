@@ -28,3 +28,13 @@
   - test and expect are methods of jest, which globally created by the create react app 
 
   create react app use jest and react script combination 
+
+# Test Driven Development
+ - write test first then write the code
+ - aka red-green testing as all tests goes from red failed state to green stat
+ 
+ # what happens when npm test is run
+  - jest starts in watch mode
+  - what us watch mode 
+    - every time a file changes, jest will run the tests
+    - only execute those files which are changed
