@@ -66,3 +66,24 @@ helps to unederstand how much of the code have been tested
 -function coverage: how much functions covered
 -line coverage: line of source code have been covered
 
+# Assertions
+it decides a test passes or fails
+it is carried out by global object expect()
+expect(value) argument should be the vlaue your code produces
+we use expect along with a matcher function
+  example : expect(textElement).toBeInDoucment()
+matcher optionally accepts a argument
+jest out if the box only supprots the js which not include the ui
+  so we use the testing-library/jest-DOM
+
+# What to test
+test if the component renders
+it renders with props
+renders in different states
+component reacts to events
+
+# what not to test
+thrid party codes like MUI components
+not important Pov of user
+
+
