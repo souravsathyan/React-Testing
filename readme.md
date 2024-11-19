@@ -38,3 +38,31 @@
   - what us watch mode 
     - every time a file changes, jest will run the tests
     - only execute those files which are changed
+
+# FILTERING
+we can run test by filename : by pressing the p in watch mode
+by test name : by pressing t
+test only in the change files : by pressing o
+can skip the test by using the test.skip in global 
+can test only those specific test by giving the test.only
+
+# Grouping the tests
+using the describe method
+it accepts name and function to execute the test
+we can also use the only and skip method
+we can write nested test in side the describe
+
+1 Test Suites is one file
+
+# filename conventions
+.test.js or .test.tsx
+.spec.js or .spec.tsx
+.js or .ts in folder __tests__
+
+# Code Coverage
+helps to unederstand how much of the code have been tested
+- statement conerage: how much statement have been executed
+- branches coverage:
+-function coverage: how much functions covered
+-line coverage: line of source code have been covered
+
