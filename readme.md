@@ -89,5 +89,4 @@ helps to unederstand how much of the code have been tested
 
 - test the behaviour
 - 3rd party code eg. MUI components instead test he components that uses the MUI components
-- code that is not important from users pov
--
+- code that is not important from users pov -
