@@ -7,5 +7,4 @@ describe("greet", () => {
     const textElement = screen.getByText(/Greet/);
     expect(textElement).toBeInTheDocument();
   });
-
 });
