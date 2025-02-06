@@ -86,4 +86,16 @@ component reacts to events
 thrid party codes like MUI components
 not important Pov of user
 
+# RTL Queries
+queries are methods that testing library provides to find element on the page
+to find single element : getBy, queryBy, findBy
+to find multiple elements : getAllBy, queryAllBy, findAllBy
+are used
+
+# getBy... queries
+a class of queries return the matching node for a query, and throw a descriptive error if no elements match or if more than one match id found
+by default , many semantic elements in html have a role
+button - button role, anchor - link role etc.
+if elements have no role then role attribute can be used
+
 
