@@ -107,3 +107,26 @@ if elements have no role then role attribute can be used
 - test the behaviour
 - 3rd party code eg. MUI components instead test he components that uses the MUI components
 - code that is not important from users pov -
+
+# getByRole Options
+
+- name
+  - accessible name is equal to aria-label, label name, text content
+  -
+
+# getByAltText
+
+- returns element that has alt text
+- only supports which have alt attribute like img, input, area etc.
+-
+
+# Priority of queries
+
+- getByRole
+- getByLabelText
+- getByPlaceholderText
+- getByText
+- getByDisplayValue
+- getByAltText
+- getByTitle
+- getByTestId
