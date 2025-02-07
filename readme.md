@@ -90,3 +90,40 @@ helps to unederstand how much of the code have been tested
 - test the behaviour
 - 3rd party code eg. MUI components instead test he components that uses the MUI components
 - code that is not important from users pov -
+
+## every test we write include
+
+- render the component
+- find and element rendered by the component
+- assertion against a value we pass by
+
+# RTL queries
+
+- are methods that provided by the testing lib. to find element on page
+- to find a single element
+
+  - getBy..
+  - queryBy..
+  - findBy..
+
+- to find multiple elements
+
+  - getAllBy..
+  - queryAllBy..
+  - findAllBy..
+
+- SUffix can be Role, labelText, PlaceholderText, Text, DisplayValue, AltText, Title, TestId
+
+# getBy.. Queries
+
+- class of queries returns matching node for query
+- throws error if no match found or multiple match found
+
+# getByRole query
+
+- quries elements for given role.
+- Roles refers to ARIA roles : define purpose or behavior of html element for screen reader.
+- by default html elements have roles.
+- we can give role to elements that do not have roles
+- eg: to use an anchor element as button we can add role="button"
+-
