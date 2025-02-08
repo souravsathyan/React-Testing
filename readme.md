@@ -87,6 +87,16 @@ helps to unederstand how much of the code have been tested
 
 # what not to test
 
+thrid party codes like MUI components not important Pov of user
+
+# RTL Queries
+
+queries are methods that testing library provides to find element on the page to find single element : getBy, queryBy, findBy to find multiple elements : getAllBy, queryAllBy, findAllBy are used
+
+# getBy... queries
+
+a class of queries return the matching node for a query, and throw a descriptive error if no elements match or if more than one match id found by default , many semantic elements in html have a role button - button role, anchor - link role etc. if elements have no role then role attribute can be used
+
 - test the behaviour
 - 3rd party code eg. MUI components instead test he components that uses the MUI components
 - code that is not important from users pov -
@@ -125,5 +135,26 @@ helps to unederstand how much of the code have been tested
 - Roles refers to ARIA roles : define purpose or behavior of html element for screen reader.
 - by default html elements have roles.
 - we can give role to elements that do not have roles
-- eg: to use an anchor element as button we can add role="button"
--
+- eg: to use an anchor element as button we can add role="button" -
+
+# getByRole Options
+
+- name
+
+  - accessible name is equal to aria-label, label name, text content -
+
+# getByAltText
+
+- returns element that has alt text
+- only supports which have alt attribute like img, input, area etc. -
+
+# Priority of queries
+
+- getByRole
+- getByLabelText
+- getByPlaceholderText
+- getByText
+- getByDisplayValue
+- getByAltText
+- getByTitle
+- getByTestId
