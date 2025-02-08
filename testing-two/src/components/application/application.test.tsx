@@ -18,6 +18,11 @@ describe("Application", () => {
     const paraElement = screen.getByText("All fields are mandatory");
     expect(paraElement).toBeInTheDocument();
 
+    const paraElement2 = screen.getByText(" are mandatory", { exact: false });
+    expect(paraElement2).toBeInTheDocument();
+    const paraElement3 = screen.getByText(/mandatory/, { exact: false });
+    expect(paraElement3).toBeInTheDocument();
+
     const displayValue = screen.getByDisplayValue("Vishwas");
     expect(displayValue).toBeInTheDocument();
 
