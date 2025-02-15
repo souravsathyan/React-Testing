@@ -41,7 +41,7 @@ test(name, function, timeout)
 - `test()` – Defines a test case
 - `expect()` – Defines assertions
 
---------------------------------------------------------------------------------
+---
 
 ## 🏆 Test-Driven Development (TDD)
 
@@ -51,7 +51,7 @@ test(name, function, timeout)
   - Tests **fail (red)** initially
   - Code is written until tests **pass (green)**
 
---------------------------------------------------------------------------------
+---
 
 ## 🚀 Running Tests
 
@@ -66,15 +66,15 @@ npm test
 
 ### 🎯 Filtering Tests
 
-Command       | Description
-------------- | -----------------------------------
-Press `p`     | Run tests by **filename**
-Press `t`     | Run tests by **test name**
-Press `o`     | Run tests only in **changed files**
-`test.skip()` | Skip a test
-`test.only()` | Run only a specific test
+| Command       | Description                         |
+| ------------- | ----------------------------------- |
+| Press `p`     | Run tests by **filename**           |
+| Press `t`     | Run tests by **test name**          |
+| Press `o`     | Run tests only in **changed files** |
+| `test.skip()` | Skip a test                         |
+| `test.only()` | Run only a specific test            |
 
---------------------------------------------------------------------------------
+---
 
 ## 🏷️ Grouping Tests
 
@@ -83,8 +83,12 @@ Press `o`     | Run tests only in **changed files**
 
 ```javascript
 describe("Group Name", () => {
-  test("Test 1", () => { /* ... */ });
-  test("Test 2", () => { /* ... */ });
+  test("Test 1", () => {
+    /* ... */
+  });
+  test("Test 2", () => {
+    /* ... */
+  });
 });
 ```
 
@@ -92,17 +96,17 @@ describe("Group Name", () => {
 
 A **test suite** is one file that contains multiple tests.
 
---------------------------------------------------------------------------------
+---
 
 ## 📄 Filename Conventions
 
-Filename                  | Example
-------------------------- | --------------------
-`.test.js` or `.test.tsx` | `Component.test.js`
-`.spec.js` or `.spec.tsx` | `Component.spec.tsx`
-Inside `tests/` folder    | `tests/Component.js`
+| Filename                  | Example              |
+| ------------------------- | -------------------- |
+| `.test.js` or `.test.tsx` | `Component.test.js`  |
+| `.spec.js` or `.spec.tsx` | `Component.spec.tsx` |
+| Inside `tests/` folder    | `tests/Component.js` |
 
---------------------------------------------------------------------------------
+---
 
 ## 📊 Code Coverage
 
@@ -117,7 +121,7 @@ Helps determine **how much code** has been tested.
 npm test -- --coverage
 ```
 
---------------------------------------------------------------------------------
+---
 
 ## ✅ Assertions
 
@@ -131,7 +135,7 @@ expect(sum(2, 2)).toBe(4);
 
 📌 **More matchers:** [Jest Matchers](https://jestjs.io/docs/using-matchers)
 
---------------------------------------------------------------------------------
+---
 
 ## 🛠️ What to Test?
 
@@ -142,7 +146,7 @@ expect(sum(2, 2)).toBe(4);
 - Third-party components (e.g., Material-UI)
 - Non-user-facing code
 
---------------------------------------------------------------------------------
+---
 
 ## 🔍 RTL Queries
 
@@ -150,19 +154,19 @@ expect(sum(2, 2)).toBe(4);
 
 ### **Find a Single Element**
 
-Query        | Description
------------- | ------------------------------------------------------------
-`getBy...`   | Finds an element, **throws error** if none or multiple found
-`queryBy...` | Finds an element, **returns null** if none found
-`findBy...`  | Returns a **Promise**, waits for element to appear
+| Query        | Description                                                  |
+| ------------ | ------------------------------------------------------------ |
+| `getBy...`   | Finds an element, **throws error** if none or multiple found |
+| `queryBy...` | Finds an element, **returns null** if none found             |
+| `findBy...`  | Returns a **Promise**, waits for element to appear           |
 
 ### **Find Multiple Elements**
 
-Query           | Description
---------------- | ------------------------------------------------------------------
-`getAllBy...`   | Finds all matching elements, **throws error** if none found
-`queryAllBy...` | Finds all matching elements, **returns empty array** if none found
-`findAllBy...`  | Returns a **Promise**, waits for multiple elements
+| Query           | Description                                                        |
+| --------------- | ------------------------------------------------------------------ |
+| `getAllBy...`   | Finds all matching elements, **throws error** if none found        |
+| `queryAllBy...` | Finds all matching elements, **returns empty array** if none found |
+| `findAllBy...`  | Returns a **Promise**, waits for multiple elements                 |
 
 ### **Query Types**
 
@@ -170,7 +174,7 @@ Query           | Description
 - `getByText`, `getByDisplayValue`, `getByAltText`
 - `getByTitle`, `getByTestId`
 
---------------------------------------------------------------------------------
+---
 
 ## 🏗️ Debugging Tests
 
@@ -179,16 +183,16 @@ screen.debug();
 logRoles(view.container);
 ```
 
---------------------------------------------------------------------------------
+---
 
 ## 🔥 `fireEvent` vs `user-event`
 
-Feature                                      | fireEvent                                                 | user-event
--------------------------------------------- | --------------------------------------------------------- | --------------------------------
-**Triggers events manually**                 | ✅                                                         | ❌
-**Simulates real user interactions**         | ❌                                                         | ✅
-**Includes extra checks (e.g., visibility)** | ❌                                                         | ✅
-**Example**                                  | `fireEvent.change(input, { target: { value: 'hello' } })` | `userEvent.type(input, 'hello')`
+| Feature                                      | fireEvent                                                 | user-event                       |
+| -------------------------------------------- | --------------------------------------------------------- | -------------------------------- |
+| **Triggers events manually**                 | ✅                                                        | ❌                               |
+| **Simulates real user interactions**         | ❌                                                        | ✅                               |
+| **Includes extra checks (e.g., visibility)** | ❌                                                        | ✅                               |
+| **Example**                                  | `fireEvent.change(input, { target: { value: 'hello' } })` | `userEvent.type(input, 'hello')` |
 
 📌 **Prefer `user-event` for realistic testing.**
 
@@ -201,6 +205,7 @@ Feature                                      | fireEvent                        
 ### **Utility API**
 
 #### `type(element, text)`
+
 Types the given `text` into an `input` or `textarea` element.
 
 ```js
@@ -216,6 +221,7 @@ test("types into input", async () => {
 ```
 
 #### `clear(element)`
+
 Clears the value of an input field.
 
 ```js
@@ -228,6 +234,7 @@ test("clears input value", async () => {
 ```
 
 #### `selectOptions(select, values)`
+
 Selects one or more options in a `<select>` element.
 
 ```js
@@ -245,6 +252,7 @@ test("selects an option", async () => {
 ```
 
 #### `deselectOptions(select, values)`
+
 Deselects options in a `<select multiple>` element.
 
 ```js
@@ -252,7 +260,9 @@ test("deselects an option", async () => {
   render(
     <select multiple>
       <option value="1">One</option>
-      <option value="2" selected>Two</option>
+      <option value="2" selected>
+        Two
+      </option>
     </select>
   );
   const select = screen.getByRole("listbox");
@@ -262,6 +272,7 @@ test("deselects an option", async () => {
 ```
 
 #### `upload(element, file)`
+
 Simulates file upload.
 
 ```js
@@ -279,6 +290,7 @@ test("uploads a file", async () => {
 ## 📌 Clipboard API
 
 #### `copy(element)`
+
 Simulates copying selected text.
 
 ```js
@@ -291,6 +303,7 @@ test("copies text", async () => {
 ```
 
 #### `cut(element)`
+
 Cuts the selected text.
 
 ```js
@@ -303,6 +316,7 @@ test("cuts text", async () => {
 ```
 
 #### `paste(element, text)`
+
 Simulates pasting text into an input field.
 
 ```js
@@ -319,6 +333,7 @@ test("pastes text", async () => {
 ## 📌 Convenience API
 
 #### `tab()`
+
 Simulates tabbing through elements.
 
 ```js
@@ -337,6 +352,7 @@ test("tabs through fields", async () => {
 ```
 
 #### `hover(element)`
+
 Simulates hovering over an element.
 
 ```js
@@ -349,6 +365,7 @@ test("hovers over button", async () => {
 ```
 
 #### `dblClick(element)`
+
 Simulates double-clicking an element.
 
 ```js
@@ -362,6 +379,7 @@ test("double-clicks button", async () => {
 ```
 
 #### `click(element)`
+
 Simulates a mouse click.
 
 ```js
@@ -374,8 +392,40 @@ test("clicks button", async () => {
 });
 ```
 
+## 📌 RenderHook
 
---------------------------------------------------------------------------------
+- for testing the custom hooks
+- wraps the hooks for testing
+- returns a property called result
+- it have a current property which contain all the returned values
+
+```
+describe('useCounter',()=>{
+   test('should render the inital count',()=>{
+       const {result} = renderHook(useCounter);
+       expect(result.current.count).toBe(0);
+   })
+})
+```
+
+- initialProp for accepting props in hooks
+
+```
+test("should accept and render the inital count", () => {
+   const { result } = renderHook(useCounter, {
+     initialProps: { initialCount: 10 },
+   });
+   expect(result.current.count).toBe(10);
+ });
+```
+
+ - **act()**
+  - tasks like rendering, user events, or data fetching can be considered as “units” of interaction with a user interface
+  - react-dom/test-utils provides a helper called act() that makes sure all updates related to these “units” have been processed and applied to the DOM before you make any assertions  
+  - its a helper function which updates the process before the assertions are made
+  
+
+---
 
 ## 📌 Summary
 
@@ -384,7 +434,5 @@ test("clicks button", async () => {
 - **Write meaningful tests** (don't test implementation details)
 - Use `getBy...`, `queryBy...`, and `findBy...` queries effectively
 - Prefer `user-event` over `fireEvent` for user interactions
-
-
 
 🚀 Happy Testing! 🎯
