@@ -1,3 +1,2 @@
-import { TextEncoder, TextDecoder } from 'util';
 
-Object.assign(global, { TextDecoder, TextEncoder });
+global.TextEncoder = require('util').TextEncoder;
