@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Counter: React.FC = () => {
   const [count, setCount] = useState(0);
-  const [amount, setAmount] = useState(1);
+  const [amount, setAmount] = useState(0);
 
   const increaseCount = () => {
     setCount(count + 1);
@@ -18,7 +18,7 @@ const Counter: React.FC = () => {
         value={amount}
         onChange={(e) => setAmount(parseInt(e.target.value))}
       />
-      <button onClick={() => setCount(amount)}>Set</button>
+      <button onClick={() => setCount((prev)=>prev+10)}>Set</button>
     </div>
   );
 };

@@ -1,13 +1,13 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { Application } from "./components/application/application";
-import Counter from "./components/counter/counter";
+import AppProvider from "./providers/AppProvider";
 
 function App() {
   return (
-    <div className="App">
-      <Counter />
-    </div>
+    <AppProvider>
+      <div className="App">
+
+      </div>
+    </AppProvider>
   );
 }
 
