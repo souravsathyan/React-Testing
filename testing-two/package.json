@@ -28,7 +28,6 @@
     "eject": "react-scripts eject",
     "coverage": "react-scripts test --coverage --collectCoverageFrom='src/components/**/*.{ts,tsx}' --collectCoverageFrom='!src/components/**/*.{types,spec,stories,constants,test}.{ts,tsx}' --watchAll",
     "prepare": "husky",
-    "lint": "eslint --ignore-path .gitignore .",
     "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,css,scss}\""
   },
   "eslintConfig": {
@@ -62,9 +61,15 @@
     }
   },
   "devDependencies": {
+    "@eslint/js": "^9.20.0",
     "@testing-library/jest-dom": "^6.6.3",
+    "eslint": "^8.57.1",
+    "eslint-plugin-jest-dom": "^5.5.0",
+    "eslint-plugin-react": "^7.37.4",
+    "globals": "^15.15.0",
     "husky": "^9.1.7",
     "jest-environment-jsdom": "^29.7.0",
-    "msw": "^2.7.0"
+    "msw": "^2.7.0",
+    "typescript-eslint": "^8.24.0"
   }
 }
